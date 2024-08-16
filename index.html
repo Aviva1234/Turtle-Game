@@ -6,6 +6,8 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="researcher.js"></script>
+    <script src="game.js"></script>
   </head>
   <body>
     <a-scene physics="gravity: 0">
@@ -30,30 +32,73 @@
       <a-entity
         gltf-model="#turtle"
         id="turtle1"
-        position="-4 -24 5"
+        position="14 -21.5 -14"
+        scale="3 3 3"
+        rotation="0 290 0"
         static-body="shape: sphere; sphereRadius: 6"
       ></a-entity>
       <a-entity
         gltf-model="#turtle"
         id="turtle2"
-        position="30 -24 -37"
-        scale="3 3 3"
+        position="30 -22.7 -37"
+        scale="5 5 5"
+        rotation="0 60 0"
         static-body="shape: sphere; sphereRadius: 6"
       ></a-entity>
       <a-entity
         gltf-model="#turtle"
         id="turtle3"
-        position="-23 -19 14"
+        position="-24 -11.5 17"
+        scale="3.5 3.5 3.5"
+        rotation="0 200 0"
+        static-body="shape: sphere; sphereRadius: 6"
+      ></a-entity>
+      <a-entity
+        gltf-model="#turtle"
+        id="turtle4"
+        position="39 -19.5 27"
         scale="3.5 3.5 3.5"
         static-body="shape: sphere; sphereRadius: 6"
       ></a-entity>
       <a-entity
-        gltf-model="#researcher"
-        position="30 -24 -30"
-        rotation="0 180 0"
-        scale="3 3 3"
+        gltf-model="#turtle"
+        id="turtle5"
+        position="-57 -23 -50"
+        scale="3.5 3.5 3.5"
+        rotation="0 270 0"
         static-body="shape: sphere; sphereRadius: 6"
       ></a-entity>
+      <a-entity
+        gltf-model="#researcher"
+        position="-20 -26 -28"
+        rotation="0 120 0"
+        scale="3 3 3"
+        static-body="shape: sphere; sphereRadius: 6"
+        movement
+      ></a-entity>
+      <a-entity
+        id="camera"
+        kinematic-body
+        look-controls
+        wasd-controls="acceleration: 200"
+        camera
+        position="-10 -18 -20"
+        rotation="-6 -0.5 0"
+        ><a-entity position="-5 -5 -12">
+          <a-entity
+            position="-0.6 -0.13 0"
+            text="font: exo2bold; width:12; color:purple; value:Turtles\n to rescue; align:left;"
+          ></a-entity>
+          <a-entity
+            position="-8 0.3 0"
+            text="font: exo2bold; width: 30; color: deeppink; value:5; align:center;"
+          ></a-entity>
+          <a-entity
+            position="15 0.3 0"
+            text="font: exo2bold; width:30; color:yellow;"
+          ></a-entity>
+        </a-entity>
+      </a-entity>
     </a-scene>
   </body>
 </html>
